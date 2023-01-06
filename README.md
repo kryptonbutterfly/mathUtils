@@ -32,8 +32,8 @@ Output:
 #### Range.index()
 ```java
 String[] array = { "Hello,", "Range!" };
-for (IndexElement<String> ie : Range.range(array))
-  System.out.println(ie.index() + " -- " + ie.element());
+for (int index : Range.range(array).index())
+  System.out.println(index);
 ```
 Output:
 ```bash
@@ -74,4 +74,20 @@ Output:
 C
 b
 A
+```
+#### Min.min
+```java
+System.out.println(Min.min(5, -10, 2));
+```
+Output:
+```bash
+-10
+```
+#### Max.max
+```java
+System.out.println(Max.max(5, -10, 2));
+```
+Output:
+```bash
+5
 ```
