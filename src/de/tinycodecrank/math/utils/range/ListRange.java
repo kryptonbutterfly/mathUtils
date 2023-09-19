@@ -25,7 +25,7 @@ public final class ListRange
 	
 	public static final <T> ElementIndexListRange<T> range(int start, List<T> list)
 	{
-		return new ElementIndexListRange<>(list, Range.range(Max.max(0, start)));
+		return new ElementIndexListRange<>(list, Range.range(Max.max(0, start), list.size()));
 	}
 	
 	public static final <T> ElementIndexListRange<T> range(List<T> list, int stop)

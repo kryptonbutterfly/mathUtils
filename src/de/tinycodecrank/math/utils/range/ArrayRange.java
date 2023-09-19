@@ -32,6 +32,11 @@ public final class ArrayRange
 		return new ElementIndexArrayRange<>(array, Range.range(0, Min.min(array.length, stop)));
 	}
 	
+	public static final <T> ElementIndexArrayRange<T> range(int start, int stop, T[] array)
+	{
+		return new ElementIndexArrayRange<>(array, Range.range(start, Min.min(array.length, stop)));
+	}
+	
 	public static final class IndexArrayRange<T> implements IRange<Integer, IndexArrayRange<T>>
 	{
 		private final T[]	array;
