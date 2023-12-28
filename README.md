@@ -11,6 +11,23 @@ Range   | an iterable that either supplies an index, an element or both (see exa
 Min     | contains min functions for every primitive (see java.lang.Math#min)
 Max     | contains max functions for every primitive (see java.lang.Math#max)
 
+## Getting the latest release
+
+```xml
+<repository>
+  <id>github</id>
+  <url>https://maven.pkg.github.com/tinycodecrank/maven-repo</url>
+</repository>
+```
+
+```xml
+<dependency>
+  <groupId>de.tinycodecrank</groupId>
+  <artifactId>math_utils</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
 ## Download
 
 java version | library version | Download
