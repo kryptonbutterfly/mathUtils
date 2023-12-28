@@ -22,6 +22,26 @@ public class Range implements Iterable<Integer>
 		return StringRange.rRange(str);
 	}
 	
+	public static StringRange range(int start, String str)
+	{
+		return StringRange.range(start, str);
+	}
+	
+	public static StringRange rRange(int start, String str)
+	{
+		return StringRange.rRange(start, str);
+	}
+	
+	public static StringRange range(int start, int stop, String str)
+	{
+		return StringRange.range(start, stop, str);
+	}
+	
+	public static StringRange rRange(int start, int stop, String str)
+	{
+		return StringRange.rRange(start, stop, str);
+	}
+	
 	public static <T> ElementIndexArrayRange<T> range(T[] array)
 	{
 		return ArrayRange.range(array);

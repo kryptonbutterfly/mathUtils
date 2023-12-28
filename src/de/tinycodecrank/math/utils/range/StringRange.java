@@ -16,6 +16,26 @@ public final class StringRange implements IRange<IndexElement<Character>, String
 		return new StringRange(str, Range.rRange(0, str.length()));
 	}
 	
+	public static final StringRange range(int start, String str)
+	{
+		return new StringRange(str, Range.range(start, str.length()));
+	}
+	
+	public static final StringRange rRange(int start, String str)
+	{
+		return new StringRange(str, Range.rRange(start, str.length()));
+	}
+	
+	public static final StringRange range(int start, int stop, String str)
+	{
+		return new StringRange(str, Range.range(start, stop));
+	}
+	
+	public static final StringRange rRange(int start, int stop, String str)
+	{
+		return new StringRange(str, Range.rRange(start, stop));
+	}
+	
 	private final String	str;
 	private final Range		range;
 	
