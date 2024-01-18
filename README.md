@@ -41,7 +41,7 @@ java version | library version | Download
 ```java
 String[] array = { "Hello,", "Range!" };
 for (var ie : Range.range(array))
-  System.out.println(ie.index() + " -- " + ie.element());
+    System.out.println(ie.index() + " -- " + ie.element());
 ```
 Output:
 ```bash
@@ -52,7 +52,7 @@ Output:
 ```java
 String[] array = { "Hello,", "Range!" };
 for (int index : Range.range(array).index())
-  System.out.println(index);
+    System.out.println(index);
 ```
 Output:
 ```bash
@@ -63,7 +63,7 @@ Output:
 ```java
 String[] array = { "Hello,", "Range!" };
 for (String element : Range.range(array).element())
-  System.out.println(element);
+    System.out.println(element);
 ```
 Output:
 ```bash
@@ -74,7 +74,7 @@ Range!
 ```java
 int start = 1, stop = 5;
 for (int i : Range.range(start, stop))
-  System.out.println(i);
+    System.out.println(i);
 ```
 Output:
 ```bash
@@ -86,7 +86,7 @@ Output:
 #### String Range
 ```java
 for (char c : Range.range("AbC").reverse().element())
-	System.out.println(c);
+    System.out.println(c);
 ```
 Output:
 ```bash
