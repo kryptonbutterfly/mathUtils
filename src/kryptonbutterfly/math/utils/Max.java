@@ -1,6 +1,6 @@
-package de.tinycodecrank.math.utils;
+package kryptonbutterfly.math.utils;
 
-import static de.tinycodecrank.math.utils.range.Range.*;
+import static kryptonbutterfly.math.utils.range.Range.*;
 
 public class Max
 {

@@ -1,4 +1,4 @@
-package de.tinycodecrank.math.utils.range;
+package kryptonbutterfly.math.utils.range;
 
 import java.util.Iterator;
 import java.util.stream.Stream;

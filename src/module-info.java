@@ -1,6 +1,6 @@
-module de.tinycodecrank.mathUtils
+module kryptonbutterfly.mathUtils
 {
-	exports de.tinycodecrank.math.utils;
-	exports de.tinycodecrank.math.utils.limit;
-	exports de.tinycodecrank.math.utils.range;
+	exports kryptonbutterfly.math.utils;
+	exports kryptonbutterfly.math.utils.limit;
+	exports kryptonbutterfly.math.utils.range;
 }

@@ -1,4 +1,4 @@
-package de.tinycodecrank.math.utils.limit;
+package kryptonbutterfly.math.utils.limit;
 
 public final class LimitInt
 {

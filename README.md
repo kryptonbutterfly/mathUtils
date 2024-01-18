@@ -1,4 +1,4 @@
-# mathUtils [![Maven Package](https://github.com/tinycodecrank/mathUtils/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/tinycodecrank/mathUtils/actions/workflows/maven-publish.yml)
+# mathUtils [![Maven Package](https://github.com/kryptonbutterfly/mathUtils/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/kryptonbutterfly/mathUtils/actions/workflows/maven-publish.yml)
 
 ## Contents
 
@@ -16,7 +16,7 @@ Max     | contains max functions for every primitive (see java.lang.Math#max)
 ```xml
 <repository>
   <id>github</id>
-  <url>https://maven.pkg.github.com/tinycodecrank/maven-repo</url>
+  <url>https://maven.pkg.github.com/kryptonbutterfly/maven-repo</url>
 </repository>
 ```
 

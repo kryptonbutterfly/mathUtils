@@ -1,4 +1,4 @@
-package de.tinycodecrank.math.utils.range;
+package kryptonbutterfly.math.utils.range;
 
 import java.util.Iterator;
 import java.util.List;
@@ -7,8 +7,8 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import de.tinycodecrank.math.utils.range.ArrayRange.ElementIndexArrayRange;
-import de.tinycodecrank.math.utils.range.ListRange.ElementIndexListRange;
+import kryptonbutterfly.math.utils.range.ArrayRange.ElementIndexArrayRange;
+import kryptonbutterfly.math.utils.range.ListRange.ElementIndexListRange;
 
 public class Range implements Iterable<Integer>
 {
