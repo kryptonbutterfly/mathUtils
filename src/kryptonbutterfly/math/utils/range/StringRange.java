@@ -6,40 +6,40 @@ import java.util.stream.StreamSupport;
 
 public final class StringRange implements IRange<IndexElement<Character>, StringRange>
 {
-	public static final StringRange range(String str)
+	public static final StringRange range(CharSequence str)
 	{
 		return new StringRange(str, Range.range(0, str.length()));
 	}
 	
-	public static final StringRange rRange(String str)
+	public static final StringRange rRange(CharSequence str)
 	{
 		return new StringRange(str, Range.rRange(0, str.length()));
 	}
 	
-	public static final StringRange range(int start, String str)
+	public static final StringRange range(int start, CharSequence str)
 	{
 		return new StringRange(str, Range.range(start, str.length()));
 	}
 	
-	public static final StringRange rRange(int start, String str)
+	public static final StringRange rRange(int start, CharSequence str)
 	{
 		return new StringRange(str, Range.rRange(start, str.length()));
 	}
 	
-	public static final StringRange range(int start, int stop, String str)
+	public static final StringRange range(int start, int stop, CharSequence str)
 	{
 		return new StringRange(str, Range.range(start, stop));
 	}
 	
-	public static final StringRange rRange(int start, int stop, String str)
+	public static final StringRange rRange(int start, int stop, CharSequence str)
 	{
 		return new StringRange(str, Range.rRange(start, stop));
 	}
 	
-	private final String	str;
-	private final Range		range;
+	private final CharSequence	str;
+	private final Range			range;
 	
-	private StringRange(String str, Range range)
+	private StringRange(CharSequence str, Range range)
 	{
 		this.str	= str;
 		this.range	= range;
@@ -90,10 +90,10 @@ public final class StringRange implements IRange<IndexElement<Character>, String
 	
 	public static final class IndexRange implements IRange<Integer, IndexRange>
 	{
-		private final String	str;
-		private final Range		range;
+		private final CharSequence	str;
+		private final Range			range;
 		
-		private IndexRange(String str, Range range)
+		private IndexRange(CharSequence str, Range range)
 		{
 			this.str	= str;
 			this.range	= range;
@@ -129,10 +129,10 @@ public final class StringRange implements IRange<IndexElement<Character>, String
 	
 	public static final class CharRange implements IRange<Character, CharRange>
 	{
-		private final String	str;
-		private final Range		range;
+		private final CharSequence	str;
+		private final Range			range;
 		
-		private CharRange(String str, Range range)
+		private CharRange(CharSequence str, Range range)
 		{
 			this.str	= str;
 			this.range	= range;

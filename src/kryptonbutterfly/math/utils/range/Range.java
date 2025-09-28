@@ -12,32 +12,32 @@ import kryptonbutterfly.math.utils.range.ListRange.ElementIndexListRange;
 
 public class Range implements Iterable<Integer>
 {
-	public static StringRange range(String str)
+	public static StringRange range(CharSequence str)
 	{
 		return StringRange.range(str);
 	}
 	
-	public static StringRange rRange(String str)
+	public static StringRange rRange(CharSequence str)
 	{
 		return StringRange.rRange(str);
 	}
 	
-	public static StringRange range(int start, String str)
+	public static StringRange range(int start, CharSequence str)
 	{
 		return StringRange.range(start, str);
 	}
 	
-	public static StringRange rRange(int start, String str)
+	public static StringRange rRange(int start, CharSequence str)
 	{
 		return StringRange.rRange(start, str);
 	}
 	
-	public static StringRange range(int start, int stop, String str)
+	public static StringRange range(int start, int stop, CharSequence str)
 	{
 		return StringRange.range(start, stop, str);
 	}
 	
-	public static StringRange rRange(int start, int stop, String str)
+	public static StringRange rRange(int start, int stop, CharSequence str)
 	{
 		return StringRange.rRange(start, stop, str);
 	}
