@@ -9,6 +9,8 @@ import java.util.stream.StreamSupport;
 
 import kryptonbutterfly.math.utils.range.ArrayRange.ElementIndexArrayRange;
 import kryptonbutterfly.math.utils.range.ListRange.ElementIndexListRange;
+import kryptonbutterfly.math.utils.range.bool.BoolArrayRange;
+import kryptonbutterfly.math.utils.range.bool.BoolArrayRange.BoolIndexArrayRange;
 
 public class Range implements Iterable<Integer>
 {
@@ -40,6 +42,31 @@ public class Range implements Iterable<Integer>
 	public static StringRange rRange(int start, int stop, CharSequence str)
 	{
 		return StringRange.rRange(start, stop, str);
+	}
+	
+	public static BoolIndexArrayRange range(boolean[] array)
+	{
+		return BoolArrayRange.range(array);
+	}
+	
+	public static BoolIndexArrayRange rRange(boolean[] array)
+	{
+		return BoolArrayRange.rRange(array);
+	}
+	
+	public static BoolIndexArrayRange range(int start, boolean[] array)
+	{
+		return BoolArrayRange.range(start, array);
+	}
+	
+	public static BoolIndexArrayRange range(boolean[] array, int stop)
+	{
+		return BoolArrayRange.range(array, stop);
+	}
+	
+	public static BoolIndexArrayRange range(int start, int stop, boolean[] array)
+	{
+		return BoolArrayRange.range(start, stop, array);
 	}
 	
 	public static <T> ElementIndexArrayRange<T> range(T[] array)
