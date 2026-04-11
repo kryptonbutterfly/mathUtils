@@ -1,0 +1,168 @@
+[
+	{
+		"constants": {
+			"base": "kryptonbutterfly.math.utils.limit"
+		},
+		"files": [
+			{
+				"dest": "${package}/Limit${srt}_Test",
+				"ext": ".java",
+				"name": "LimitF_Test.javatpl"
+			}
+		],
+		"variants": [
+			{
+				"type": "float",
+				"package": "${base}",
+				"srt": "Float"
+			}, {
+				"type": "double",
+				"package": "${base}",
+				"srt": "Double"
+			}
+		]
+	}, {
+		"constants": {
+			"base": "kryptonbutterfly.math.utils.limit"
+		},
+		"files": [
+			{
+				"dest": "${package}/Limit${srt}_Test",
+				"ext": ".java",
+				"name": "LimitI_Test.javatpl"
+			}
+		],
+		"variants": [
+			{
+				"type": "byte",
+				"package": "${base}",
+				"srt": "Byte"
+			}, {
+				"type": "short",
+				"package": "${base}",
+				"srt": "Short"
+			}, {
+				"type": "int",
+				"package": "${base}",
+				"srt": "Int"
+			}, {
+				"type": "long",
+				"package": "${base}",
+				"srt": "Long"
+			}
+		]
+	}, {
+		"constants": {
+			"base": "kryptonbutterfly.math.utils"
+		},
+		"files": [
+			{
+				"dest": "${package}/${M}${Type}_Test",
+				"ext": ".java",
+				"name": "MinMaxI_Test.javatpl"
+			}
+		],
+		"variants": [
+			{
+				"package": "${base}",
+				"type": "byte",
+				"Type": "Byte",
+				"m": "min",
+				"M": "Min"
+			}, {
+				"package": "${base}",
+				"type": "char",
+				"Type": "Char",
+				"m": "min",
+				"M": "Min"
+			},{
+				"package": "${base}",
+				"type": "short",
+				"Type": "Short",
+				"m": "min",
+				"M": "Min"
+			}, {
+				"package": "${base}",
+				"type": "int",
+				"Type": "Int",
+				"m": "min",
+				"M": "Min"
+			}, {
+				"package": "${base}",
+				"type": "long",
+				"Type": "Long",
+				"m": "min",
+				"M": "Min"
+			}, {
+				"package": "${base}",
+				"type": "byte",
+				"Type": "Byte",
+				"m": "max",
+				"M": "Max"
+			}, {
+				"package": "${base}",
+				"type": "char",
+				"Type": "Char",
+				"m": "max",
+				"M": "Max"
+			}, {
+				"package": "${base}",
+				"type": "short",
+				"Type": "Short",
+				"m": "max",
+				"M": "Max"
+			}, {
+				"package": "${base}",
+				"type": "int",
+				"Type": "Int",
+				"m": "max",
+				"M": "Max"
+			}, {
+				"package": "${base}",
+				"type": "long",
+				"Type": "Long",
+				"m": "max",
+				"M": "Max"
+			}
+		]
+	}, {
+		"constants": {
+			"base": "kryptonbutterfly.math.utils"
+		},
+		"files": [
+			{
+				"dest": "${package}/${M}${Type}_Test",
+				"ext": ".java",
+				"name": "MinMaxF_Test.javatpl"
+			}
+		],
+		"variants": [
+			{
+				"package": "${base}",
+				"type": "float",
+				"Type": "Float",
+				"m": "min",
+				"M": "Min"
+			}, {
+				"package": "${base}",
+				"type": "double",
+				"Type": "Double",
+				"m": "min",
+				"M": "Min"
+			}, {
+				"package": "${base}",
+				"type": "float",
+				"Type": "Float",
+				"m": "max",
+				"M": "Max"
+			}, {
+				"package": "${base}",
+				"type": "double",
+				"Type": "Double",
+				"m": "max",
+				"M": "Max"
+			}
+		]
+	}
+]
+

@@ -1,0 +1,114 @@
+[
+	{
+		"constants": {
+			"base": "kryptonbutterfly.math.utils.limit"
+		},
+		"files": [
+			{
+				"dest": "${package}/Limit${srt}",
+				"ext": ".java",
+				"name": "LimitType.javatpl"
+			}
+		],
+		"variants": [
+			{
+				"type": "long",
+				"package": "${base}",
+				"srt": "Long"
+			}, {
+				"type": "byte",
+				"package": "${base}",
+				"srt": "Byte"
+			}, {
+				"type": "short",
+				"package": "${base}",
+				"srt": "Short"
+			}
+		]
+	}, {
+		"constants": {
+			"base": "kryptonbutterfly.math.utils.limit"
+		},
+		"files": [
+			{
+				"dest": "${package}/Limit${srt}",
+				"ext": ".java",
+				"name": "LimitTypeDeprecated.javatpl"
+			}
+		],
+		"variants": [
+			{
+				"type": "int",
+				"package": "${base}",
+				"srt": "Int"
+			}, {
+				"type": "float",
+				"package": "${base}",
+				"srt": "Float"
+			}, {
+				"type": "double",
+				"package": "${base}",
+				"srt": "Double"
+			}
+		]
+	}, {
+		"constants": {
+			"base": "kryptonbutterfly.math.utils.range"
+		},
+		"files": [
+			{
+				"dest": "${package}/${Type}ArrayRange",
+				"ext": ".java",
+				"name": "TypeArrayRange.javatpl"
+			}, {
+				"dest": "${package}/Index${Type}",
+				"ext": ".java",
+				"name": "IndexType.javatpl"
+			}, {
+				"dest": "${package}/Index${Type}ArrayRange",
+				"ext": ".java",
+				"name": "IndexTypeArrayRange.javatpl"
+			}, {
+				"dest": "${package}/IndexArrayRange",
+				"ext": ".java",
+				"name": "IndexArrayRange.javatpl"
+			}
+		],
+		"variants": [
+			{
+				"type": "boolean",
+				"Type": "Boolean",
+				"package": "${base}.bool_"
+			}, {
+				"type": "byte",
+				"Type": "Byte",
+				"package": "${base}.byte_"
+			}, {
+				"type": "char",
+				"Type": "Character",
+				"package": "${base}.char_"
+			}, {
+				"type": "short",
+				"Type": "Short",
+				"package": "${base}.short_"
+			}, {
+				"type": "int",
+				"Type": "Integer",
+				"package": "${base}.int_"
+			}, {
+				"type": "float",
+				"Type": "Float",
+				"package": "${base}.float_"
+			}, {
+				"type": "long",
+				"Type": "Long",
+				"package": "${base}.long_"
+			}, {
+				"type": "double",
+				"Type": "Double",
+				"package": "${base}.double_"
+			}
+		]
+	}
+]
+

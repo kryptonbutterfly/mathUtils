@@ -1,0 +1,56 @@
+package kryptonbutterfly.math.utils.limit;
+
+import kryptonbutterfly.math.utils.Min;
+import kryptonbutterfly.math.utils.Max;
+
+public record Limit${srt}(${type} min, ${type} max)
+{
+	public static boolean inRange(${type} min, ${type} value, ${type} max)
+	{
+		return min <= value && value <= max;
+	}
+	
+	public boolean inRange(${type} value)
+	{
+		return inRange(min, value, max);
+	}
+	
+	/**
+	 * @deprecated use clamp instead of limit
+	 */
+	@Deprecated
+	public static ${type} limit(${type} min, ${type} value, ${type} max)
+	{
+		return clamp(min, value, max);
+	}
+	
+	public static ${type} clamp(${type} min, ${type} value, ${type} max)
+	{
+		return Min.min(max, Max.max(min, value));
+	}
+	
+	/**
+	 * @deprecated use clamp instead of limit
+	 */
+	@Deprecated
+	public ${type} limit(${type} value)
+	{
+		return this.clamp(value);
+	}
+	
+	public ${type} clamp(${type} value)
+	{
+		return clamp(min, value, max);
+	}
+	
+	public void assertLimit(${type} value, String valueName) throws OutOfBoundsException
+	{
+		assertLimit(min, value, max, valueName);
+	}
+	
+	public static void assertLimit(${type} min, ${type} value, ${type} max, String valueName) throws OutOfBoundsException
+	{
+		if (!inRange(min, value, max))
+			throw new OutOfBoundsException(min, value, max, valueName);
+	}
+}

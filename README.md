@@ -24,7 +24,7 @@ Max     | contains max functions for every primitive (see java.lang.Math#max)
 <dependency>
   <groupId>kryptonbutterfly</groupId>
   <artifactId>math_utils</artifactId>
-  <version>2.2.0</version>
+  <version>3.0.0</version>
 </dependency>
 ```
 
@@ -32,6 +32,7 @@ Max     | contains max functions for every primitive (see java.lang.Math#max)
 
 java version | library version | Download
 :----------: | :-------------: | :-------
+18+          | 3.0.0           | [**math_utils-3.0.0.jar**](https://github.com/kryptonbutterfly/mathUtils/releases/download/v3.0.0/mathUtils.jar)
 18+          | 2.2.0           | [**math_utils-2.2.0.jar**](https://github.com/kryptonbutterfly/mathUtils/releases/download/v2.2.0/mathUtils.jar)
 18+          | 2.0.0           | [**math_utils-2.0.0.jar**](https://github-registry-files.githubusercontent.com/731108692/9a730e80-b64e-11ee-8b97-bfec54dcfa3c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240118%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240118T211359Z&X-Amz-Expires=300&X-Amz-Signature=17114c480a45c11304243cac13aa23d089732674bae44fdb1222f3cbf0781aba&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=731108692&response-content-disposition=filename%3Dmath_utils-2.0.0.jar&response-content-type=application%2Foctet-stream)
 18+          | 1.1.0           | [**math_utils-1.1.0.jar**](https://github.com/kryptonbutterfly/mathUtils/releases/download/v1.1.0/mathUtils.jar)

@@ -1,0 +1,68 @@
+package ${package};
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Random;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.TestFactory;
+
+import static kryptonbutterfly.math.utils.range.Range.*;
+import static kryptonbutterfly.math.utils.TestSettings.*;
+
+public final class ${M}${Type}_Test
+{
+	private final Random rand = new Random();
+	
+	@TestFactory
+	Stream<DynamicTest> test${M}Of2() {
+		return range(REPEATS).stream().map(_n -> {
+			final ${type} a = (${type})rand.nextLong();
+			final ${type} b = (${type})rand.nextLong();
+			
+			return DynamicTest.dynamicTest("${type} ${m}(%s, %s)".formatted(a, b), () -> {
+				final ${type} expected = (${type})Math.${m}((long)a, (long)b);
+				final ${type} actual = ${M}.${m}(a, b);
+				assertEquals(expected, actual);
+			});
+		});
+	}
+	
+	@TestFactory
+	Stream<DynamicTest> test${M}OfN()
+	{
+		final int	start	= 0;
+		final int	stop	= 10;
+		
+		return range(REPEATS).stream().flatMap(
+			_i -> IntStream.range(start, stop)
+				.mapToObj(n -> {
+					final ${type} first = (${type})rand.nextLong();
+					final var values = new ${type}[n];
+					for (int i : range(n))
+						values[i] = (${type})rand.nextLong();
+					
+					return DynamicTest.dynamicTest("${type} ${m}(%s, %s)".formatted(first, valuesToString(values)), () ->
+					{
+						
+						${type} expected = first;
+						for (${type} next : values)
+							expected = ${M}.${m}(expected, next);
+						
+						assertEquals(expected, ${M}.${m}(first, values));
+					});
+				}));
+	}
+	
+	private static String valuesToString(${type}[] values) {
+		final var sb = new StringBuilder();
+		for (final var ie : range(values)) {
+			if (ie.index() != 0)
+				sb.append(", ");
+			sb.append(ie.element());
+		}
+		return sb.toString();
+	}
+}

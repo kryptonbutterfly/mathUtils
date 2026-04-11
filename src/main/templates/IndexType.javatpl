@@ -1,0 +1,15 @@
+package ${package};
+
+public record Index${Type}(int index, ${type} element)
+{
+	public Index${Type}(int index, ${type}[] source)
+	{
+		this(index, source[index]);
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "@" + index + " : " + element;
+	}
+}

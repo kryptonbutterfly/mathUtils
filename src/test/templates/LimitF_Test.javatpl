@@ -1,0 +1,76 @@
+package ${package};
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Random;
+
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.TestFactory;
+import org.junit.jupiter.api.function.Executable;
+
+import kryptonbutterfly.math.utils.Max;
+import kryptonbutterfly.math.utils.Min;
+
+import static kryptonbutterfly.math.utils.TestSettings.*;
+
+public final class Limit${srt}_Test
+{
+	final Random rand = new Random();
+	
+	@TestFactory
+	Stream<DynamicTest> test() {
+		
+		return IntStream.range(0, REPEATS).mapToObj(_n -> {
+			final ${type} a = rand.next${srt}();
+			final ${type} b = rand.next${srt}();
+			
+			final ${type} min = Min.min(a, b);
+			final ${type} max = Max.max(a, b);
+			final ${type} value = rand.next${srt}();
+			
+			return DynamicTest.dynamicTest("test(min=%s, value=%s, max=%s)".formatted(min, value, max), () -> {
+				validateStatic(min, value, max);
+				validateDynamic(min, value, max);
+			});
+		});
+	}
+	
+	private void validateStatic(${type} min, ${type} value, ${type} max)
+	{
+		final boolean expected = min <= value && value <= max;
+		final boolean actual = Limit${srt}.inRange(min, value, max);
+		assertEquals(expected, actual);
+		
+		final Executable op = () -> Limit${srt}.assertLimit(min, value, max, "value");
+		
+		if (actual)
+			assertDoesNotThrow(op);
+		else
+			assertThrows(OutOfBoundsException.class, op);
+		
+		final ${type} clamped = Limit${srt}.clamp(min, value, max);
+		assertTrue(Limit${srt}.inRange(min, clamped, max));
+	}
+	
+	private void validateDynamic(${type} min, ${type} value, ${type} max)
+	{
+		final boolean expected = min <= value && value <= max;
+		final var limit = new Limit${srt}(min, max);
+		
+		final boolean actual = limit.inRange(value);
+		assertEquals(expected, actual);
+		
+		final Executable op = () -> limit.assertLimit(value, "value");
+		
+		if (actual)
+			assertDoesNotThrow(op);
+		else
+			assertThrows(OutOfBoundsException.class, op);
+		
+		final ${type} clamped = limit.clamp(value);
+		assertTrue(limit.inRange(clamped));
+	}
+}

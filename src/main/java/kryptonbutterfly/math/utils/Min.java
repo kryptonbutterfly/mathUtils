@@ -2,7 +2,7 @@ package kryptonbutterfly.math.utils;
 
 import static kryptonbutterfly.math.utils.range.Range.*;
 
-public class Min
+public final class Min
 {
 	public static byte min(byte a, byte b)
 	{

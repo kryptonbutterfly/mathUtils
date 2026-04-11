@@ -2,7 +2,7 @@ package kryptonbutterfly.math.utils;
 
 import static kryptonbutterfly.math.utils.range.Range.*;
 
-public class Max
+public final class Max
 {
 	public static byte max(byte a, byte b)
 	{

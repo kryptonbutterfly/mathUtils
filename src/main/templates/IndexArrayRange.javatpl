@@ -1,0 +1,35 @@
+package ${package};
+
+import java.util.Iterator;
+
+import kryptonbutterfly.math.utils.range.Range;
+import kryptonbutterfly.math.utils.range.utils.ARange;
+
+public final class IndexArrayRange extends ARange<${type}[], Integer>
+{
+	IndexArrayRange(${type}[] array, Range range)
+	{
+		super(array, range);
+	}
+	
+	@Override
+	public Iterator<Integer> iterator()
+	{
+		return range.iterator();
+	}
+	
+	public ${Type}ArrayRange element()
+	{
+		return new ${Type}ArrayRange(array, range);
+	}
+	
+	public Index${Type}ArrayRange iElem()
+	{
+		return new Index${Type}ArrayRange(array, range);
+	}
+	
+	public IndexArrayRange reverse()
+	{
+		return new IndexArrayRange(array, range.reverse());
+	}
+}

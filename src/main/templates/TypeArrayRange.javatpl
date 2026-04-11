@@ -1,0 +1,82 @@
+package ${package};
+
+import java.util.Iterator;
+
+import kryptonbutterfly.math.utils.Max;
+import kryptonbutterfly.math.utils.Min;
+import kryptonbutterfly.math.utils.range.Range;
+import kryptonbutterfly.math.utils.range.utils.ARange;
+
+public final class ${Type}ArrayRange extends ARange<${type}[], ${Type}>
+{
+	${Type}ArrayRange(${type}[] array, Range range)
+	{
+		super(array, range);
+	}
+	
+	@Override
+	public Iterator<${Type}> iterator()
+	{
+		return new Iterator<>()
+		{
+			final Iterator<Integer> iterator = range.iterator();
+			
+			@Override
+			public ${Type} next()
+			{
+				return array[iterator.next()];
+			}
+			
+			@Override
+			public boolean hasNext()
+			{
+				return iterator.hasNext();
+			}
+		};
+	}
+	
+	public IndexArrayRange index()
+	{
+		return new IndexArrayRange(array, range);
+	}
+	
+	public Index${Type}ArrayRange iElem()
+	{
+		return new Index${Type}ArrayRange(array, range);
+	}
+	
+	public ${Type}ArrayRange reverse()
+	{
+		return new ${Type}ArrayRange(array, range.reverse());
+	}
+	
+	public static final Index${Type}ArrayRange range(${type}[] array)
+	{
+		return new Index${Type}ArrayRange(array, Range.range(array.length));
+	}
+	
+	public static final Index${Type}ArrayRange rRange(${type}[] array)
+	{
+		return new Index${Type}ArrayRange(array, Range.rRange(0, array.length));
+	}
+	
+	public static final Index${Type}ArrayRange range(int start, ${type}[] array)
+	{
+		return range(start, array.length, array);
+	}
+	
+	public static final Index${Type}ArrayRange range(${type}[] array, int stop)
+	{
+		return range(0, stop, array);
+	}
+	
+	public static final Index${Type}ArrayRange range(int start, int stop, ${type}[] array)
+	{
+		return new Index${Type}ArrayRange(
+			array,
+			Range.range(
+				Max.max(0, start),
+				Min.min(array.length, stop)));
+	}
+}
+
